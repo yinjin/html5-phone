@@ -1,0 +1,38 @@
+html {
+	font-size: 625%;
+}
+body {
+	font-size: 0.16rem;
+}
+/*设置图片能自适应屏幕大小的改变*/
+img {  
+	display: block;
+	max-width: 100%;
+}
+.none {
+	display: none;
+}
+#header{
+	width: 100%;
+	height: 0.45rem;
+	font-size: 0.16rem;
+	background-color: #333;
+}
+#header .link {
+	width: 100%;
+	height: 0.45rem;
+	line-height: 0.45rem;
+}
+#header .link li {
+	width: 25%;
+	text-align: center;
+	float: left;
+}
+#header .link a{
+	display: block;
+	color: #eee;
+}
+#header .link a:hover, 
+#header .active a {
+	background-color: #000;
+}
