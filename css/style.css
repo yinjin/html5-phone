@@ -27,6 +27,10 @@ div, figure, figcaption {
 	height: 0.45rem;
 	font-size: 0.16rem;
 	background-color: #333;
+	/*固定头部导航*/
+	position: fixed;
+	top:0;
+	z-index: 9999;
 }
 #header .link {
 	width: 100%;
@@ -48,7 +52,7 @@ div, figure, figcaption {
 }
 #ad {
 	max-width: 6.4rem;  /*设置相对宽度，才能居中*/
-	margin: 0 auto;
+	margin: 0.45rem auto 0 auto;
 }
 #search {
 	max-width: 6.4rem;
@@ -160,27 +164,78 @@ div, figure, figcaption {
 #footer .top {
 	margin-bottom: 0.05rem;
 }
+/*资讯页*/
+#headline {
+	max-width: 6.4rem;
+	margin: 0 auto;
+	padding: 0.45rem 0 0 0;
+	position: relative;
+}
+#headline hgroup {
+	position: absolute;
+	top: 50%;
+	left: 10%;
+}
+#headline h2 {
+	color: #eee;
+	letter-spacing: 0.01rem;
+	font-size: 0.22rem;
+}
+#headline h3 {
+	color: #eee;
+	letter-spacing: 0.01rem;
+	font-size: 0.14rem;
+	margin: 0.02rem 0 0 0;
+}
+.list {
+	max-width: 6.4rem;
+	margin: 0.15rem auto;
+	font-size: 0.16rem;
+	padding: 0 0.1rem;
+	color: #666666;
+}
+.list h2 {
+	font-size: 0.2rem;
+	border-bottom: 1px dashed #999999;
+	padding: 0 0 0.15rem 0;
+}
+.about p {
+	line-height: 2;
+	margin: 0.1rem 0 0 0;
+	text-indent: 2em;
+}
+.about address {
+	font-style: normal;
+	margin: 0.2rem 0;
+	line-height: 1.6;
+}
 /*媒体查询，大于480小于640*/
 @media only screen and (min-width: 480px) and (max-width:640px) {
 	#tour h2 {
 		font-size:0.26rem;
 	}
-	#tour P,#tour figcaption h4,#tour .info {
+	#tour P,#tour figcaption h4,#tour .info, #footer {
 		font-size: 0.16rem;
 	}
-	#footer {
-		font-size: 0.16rem;
+	#headline h2 {
+		font-size: 0.22rem;
+	}
+	#headline h3 {
+		font-size: 0.14rem;
 	}
 }
 /*媒体查询，小于480*/
 @media only screen and (max-width: 480px) {
-	#tour h2 {
+	#tour h2,#headline h2 {
 		font-size:0.18rem;
 	}
 	#tour P,#tour figcaption h4,#tour .info, #search{
 		font-size: 0.14rem;
 	}
-	#footer,#search .button {
+	#footer,#search .button, #headline h3 {
 		font-size: 0.12rem;
+	}
+	.list h2 {
+		font-size: 0.17rem;
 	}
 }
