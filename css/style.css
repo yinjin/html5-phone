@@ -12,6 +12,16 @@ img {
 .none {
 	display: none;
 }
+.clearfix:after{
+	display: block;
+	height: 0;
+	content: '.';
+	clear: both;
+	visibility: hidden;
+}
+div, figure, figcaption {
+	box-sizing: border-box; /*设置元素高度包含padding和margin*/
+}
 #header{
 	width: 100%;
 	height: 0.45rem;
@@ -40,15 +50,137 @@ img {
 	max-width: 6.4rem;  /*设置相对宽度，才能居中*/
 	margin: 0 auto;
 }
-
+#search {
+	max-width: 6.4rem;
+	height: 0.33rem;
+	padding: 0.03rem 0 0 0;
+	margin: 0 auto;
+	background-color: #ddd;
+	position: relative;
+}
+#search .search {
+	display: block;
+	width: 95%;
+	height: 0.27rem;
+	padding: 0 0.05rem;
+	margin: 0 auto;
+	outline: none;
+	border: none;
+	border-radius: 0.04rem;
+	font-size: 0.14rem;
+	background-color: #fff;
+}
+#search .button {
+	display: block;
+	width: 0.5rem;
+	height: 0.27rem;
+	border: none;
+	outline: none;
+	border-top-right-radius: 0.04rem;
+	border-bottom-right-radius: 0.04rem;
+	font-size: 0.14rem;
+	letter-spacing: 0.01rem;
+	cursor: pointer;
+	position: absolute;
+	top: 0.03rem;
+	right: 1%;
+	background-color: #EEEEEE;
+}
+#tour {
+	max-width: 6.4rem;
+	margin: 0.1rem auto 0 auto;
+}
+#tour h2 {
+	text-align: center;
+	color: #666;
+	font-size: 0.26rem;
+}
+#tour section p {
+	margin: 0.05rem 0 0.1rem 0;
+	text-align: center;
+	color: #666;
+	font-size:0.16rem;
+}
+#tour figure {
+	width: 50%;
+	float: left;
+	padding: 0 0 0.05rem 0;
+	font-size: 0.16rem;
+	background-color: #eee;
+}
+#tour img {
+	padding: 0.02rem;
+	vertical-align: middle;
+	border-radius: 0.04rem;
+}
+#tour figcaption {
+	color: #666;
+	padding: 0.02rem 0.05rem;
+}
+#tour figcaption h4 {
+	padding: 0.05rem 0;
+	font-size: 0.16rem;
+	font-weight: normal;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+#tour figcaption p {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+#tour .info {
+	padding: 0.1rem 0 0 0;
+	font-size: 0.16rem;
+}
+#tour .price {
+	color: #f60;
+}
+#tour .price strong {
+	letter-spacing: 0.01rem;
+}
+#tour .sat {
+	color: #999;
+	font-style: normal;
+	float: right;
+	position: relative;
+	right: 0.05rem;
+	font-style: normal;
+}
 #footer {
 	max-width: 6.4rem;
-	margin: 0 auto;
+	margin: 0 auto 0;
 	padding: 0.1rem 0;
 	color: #777;
+	font-size: 0.16rem;
 	text-align: center;
 	background-color: #222;
 }
 #footer .top {
 	margin-bottom: 0.05rem;
+}
+/*媒体查询，大于480小于640*/
+@media only screen and (min-width: 480px) and (max-width:640px) {
+	#tour h2 {
+		font-size:0.26rem;
+	}
+	#tour P,#tour figcaption h4,#tour .info {
+		font-size: 0.16rem;
+	}
+	#footer {
+		font-size: 0.16rem;
+	}
+}
+/*媒体查询，小于480*/
+@media only screen and (max-width: 480px) {
+	#tour h2 {
+		font-size:0.18rem;
+	}
+	#tour P,#tour figcaption h4,#tour .info, #search{
+		font-size: 0.14rem;
+	}
+	#footer,#search .button {
+		font-size: 0.12rem;
+	}
 }
